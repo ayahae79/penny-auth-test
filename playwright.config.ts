@@ -7,5 +7,25 @@ export default defineConfig({
     baseURL: 'https://penny-auth.vercel.app',
     trace: 'on-first-retry',
   },
-  projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
+  projects: [
+  {
+    name: 'chromium',
+    use: {
+      ...devices['Desktop Chrome'],
+      launchOptions: { slowMo: 700 }, 
+      headless: false,
+      video: 'on',            
+      screenshot: 'only-on-failure', 
+    }
+    },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
+    {
+      name: 'iphone-16',
+      use: { ...devices['iPhone 16'] },
+    },
+]
+
 });

@@ -1,5 +1,5 @@
 # Penny Auth — End-to-End Tests
-# By: Ayah Ahmed
+#### By: Ayah Ahmed
 
 Playwright E2E tests for **https://penny-auth.vercel.app**.  
 Covers signup, signout, and signin flows plus negative cases (unregistered email, wrong password, validation).
