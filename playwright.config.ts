@@ -13,7 +13,7 @@ export default defineConfig({
     use: {
       ...devices['Desktop Chrome'],
       launchOptions: { slowMo: 700 }, 
-      headless: false,
+      headless: true,
       video: 'on',            
       screenshot: 'only-on-failure', 
     }
