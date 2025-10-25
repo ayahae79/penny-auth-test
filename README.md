@@ -7,6 +7,11 @@ Covers signup, signout, and signin flows plus negative cases (unregistered email
 
 ---
 
+## 🎬 Demo Recording
+Watch the demo   
+[ PennyAuth.mp4](PennyAuth.mp4)
+
+
 ## Quick Start
 
 **Requirements**
