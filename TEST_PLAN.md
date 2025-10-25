@@ -43,7 +43,7 @@ These tests validate the full user authentication flow:
 ## CI/CD Integration Summary
 - Workflow: `.github/workflows/e2e.yml`
 - Triggered on:
-  - Pull Requests → smoke & Chromium only
+  - Pull Requests → Chromium 
   - Push to `main` → full browser/device matrix
 - Artifacts uploaded:
   - HTML report (`playwright-report/`)
