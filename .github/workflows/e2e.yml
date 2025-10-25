@@ -1,19 +1,15 @@
 name: E2E
 
 on:
-  pull_request:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 jobs:
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    strategy:
-      fail-fast: false
-      matrix:
-        project: [chromium, firefox, iphone-16]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -25,19 +21,18 @@ jobs:
       - name: Run tests
         env:
           BASE_URL: https://penny-auth.vercel.app
-        run: |
-          npx playwright test --project="${{ matrix.project }}" --reporter=list,html
+        run: npx playwright test --reporter=list,html
       - name: Upload HTML report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: report-${{ matrix.project }}
+          name: playwright-report
           path: playwright-report
           retention-days: 7
       - name: Upload traces
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: traces-${{ matrix.project }}
+          name: traces
           path: test-results/**/trace.zip
           retention-days: 7
