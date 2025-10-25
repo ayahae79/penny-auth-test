@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test('positive flow', async ({ page }) => {
   const ts = Date.now();
-  const email = `user@penny.com`;
+  const email = `user1@penny.com`;
   const password = '123456'; 
 
   await page.goto('/sign-up');

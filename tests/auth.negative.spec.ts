@@ -14,7 +14,7 @@ test('sign-in with UNREGISTERED email shows correct error', async ({ page }) => 
 // signing in with wrong credentials
 test('sign-in with WRONG password shows correct error', async ({ page }) => {
 
-  const email = `user@penny.com`;
+  const email = `wrongPassword@penny.com`;
   const rigthPassword = '123456';
   const wrongPassword = '654321';
 
@@ -50,7 +50,7 @@ test('validation errors are shown for empty/short fields', async ({ page }) => {
 
   await page.locator('input[name="name"]').fill('user');
   await page.locator('input[name="company"]').fill('Penny Software');
-  await page.locator('input[name="email"]').fill(`user@penny.com`);
+  await page.locator('input[name="email"]').fill(`user2@penny.com`);
   await page.locator('input[name="password"]').fill('12345');
   await page.getByRole('button', { name: /create account/i }).click();
 
