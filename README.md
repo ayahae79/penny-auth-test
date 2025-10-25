@@ -1,10 +1,9 @@
 # Penny Auth — End-to-End Tests
+# By: Ayah Ahmed
 
 Playwright E2E tests for **https://penny-auth.vercel.app**.  
 Covers signup, signout, and signin flows plus negative cases (unregistered email, wrong password, validation).
 
-## Why a separate repo?
-To keep tests independent from the app’s code and deploy cycle, and to target any environment via `BASE_URL`.
 
 ---
 
