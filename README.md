@@ -7,9 +7,11 @@ Covers signup, signout, and signin flows plus negative cases (unregistered email
 
 ---
 
-## 🎬 Demo Recording
-Watch the demo   
-[ PennyAuth.mp4](PennyAuth.mp4)
+## Demo Recording
+
+You can watch the full Playwright end-to-end test walkthrough here:  
+[Watch the video on Google Drive](https://drive.google.com/file/d/1vq8n8rw353RgiDnaeVn2P9RJGtzRipwF/view?usp=share_link)
+
 
 
 ## Quick Start
